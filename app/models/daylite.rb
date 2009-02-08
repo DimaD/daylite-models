@@ -10,6 +10,11 @@ class Daylite::Base < ActiveRecord::Base
     self.name.sub("Daylite::", "")
   end
 
+  # don't allow to save Daylite::Base objects to DB
+  def readonly?
+    true
+  end
+
   def method_missing(symbol, *args)
     guess_attribute = symbol.to_s.camelize(:lower).sub("Id", "ID")
     if result = attributes[guess_attribute]
