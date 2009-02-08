@@ -4,6 +4,9 @@ class Daylite::Task < Daylite::Base
   has_many :organization_task_joins, :foreign_key => "taskID"
   has_many :organizations, :through => :organization_task_joins
 
+  has_many :project_task_joins, :foreign_key => "taskID"
+  has_many :projects, :through => :project_task_joins
+
   def organization
     organizations[0]
   end
