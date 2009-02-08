@@ -9,4 +9,18 @@ class Daylite::Base < ActiveRecord::Base
   set_table_name do
     self.name.sub("Daylite::", "")
   end
+
+  def method_missing(symbol, *args)
+    guess_attribute = symbol.to_s.camelize(:lower).sub("Id", "ID")
+    if result = attributes[guess_attribute]
+      self.class.class_eval do
+        define_method symbol do
+          return attributes[guess_attribute]
+        end
+      end
+      result
+    else
+      super
+    end
+  end
 end
