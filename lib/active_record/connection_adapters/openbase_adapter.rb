@@ -352,7 +352,7 @@ module ActiveRecord
           rows = []
           if ( results.rows_affected )
             results.each_hash do |row|  # loop through result rows
-              row.delete("_rowid") if row.key?("_rowid")
+              # row.delete("_rowid") if row.key?("_rowid")
               decimals.each do |name, precision, scale|
                 row[name] = BigDecimal.new(row[name]) if row[name] === String
               end
