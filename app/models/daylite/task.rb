@@ -1,6 +1,4 @@
 class Daylite::Task < Daylite::Base
-  set_table_name "Task"
-
   belongs_to :owner, :class_name => "User", :foreign_key => "assignedToID"
 
   has_many :organization_task_joins, :foreign_key => "taskID"
