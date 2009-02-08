@@ -1,4 +1,5 @@
 class Daylite::Project < Daylite::Base
+  #status_codes = { 1 => "", 2 => "", 3 => "", 4 => ""}
   belongs_to :owner, :class_name => "User", :foreign_key => "assignedToID"
 
   has_many :roles, :foreign_key => "projectID"
