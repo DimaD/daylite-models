@@ -15,7 +15,7 @@ end
 
 spec = Gem::Specification.new do |s| 
   s.name = "DayliteModels"
-  s.version = "0.0.1"
+  s.version = "0.1.0"
   s.author = "Dmitriy Dzema"
   s.email = "dimad.ag@gmail.com"
   s.summary = "Set of ActiveRecord classes to work with the Daylite 3 database"
