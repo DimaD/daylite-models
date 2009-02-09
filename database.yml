@@ -1,9 +1,0 @@
-#database connection info.
-#Don't touch this file if you use it as rails plugin
-#Specify daylite: settings in you rails database.yml
-daylite:
-    adapter: openbase
-    database: TestOrganization
-    host: localhost
-    username: dzema
-    password: dzema
