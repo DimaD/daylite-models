@@ -30,18 +30,27 @@ Add _daylite_ section to you database.yml
         password: my_password
 
 
-Add the following line to you environment.rb
+Add the following line to you environment.rb:
 
-Daylite::Base.establish_connection(:daylite)
+    Daylite::Base.establish_connection(:daylite)
 
 You are ready to rock! Now you can use Daylite classes in you application as usual Rails models.
 
 Usage as a standalone library
 -----------------------------
-The easiest way is to create file config/database.yml relative to you running script and place _daylite_ config in it (see Usage as Rails plugin for example). After this you need to place
+Place
 
     require 'daylite_models'
 
-somewhere in you initialization code and you are done.
+somewhere in you initialization code and provide connection info through Daylite::Base.establish_connection call. You will need to provide adapter, database, host, username and password params. See ActiveRecord::Base.establish_connection and Openbase documentation for more info. You may use the following piece of code:
 
-Another way is to provide connection info directly through Daylite::Base.establish_connection call. You will need to provide adapter, database, host, username and password params. See ActiveRecord::Base.establish_connection and Openbase documentation for more info.
+    DAYLITE_DATABASE_CONFIG = 'config/database.yml'
+    DAYLITE_CONFIG_SECTION = 'daylite'
+
+    if File.exist?(DAYLITE_DATABASE_CONFIG)
+      yaml = YAML::load(File.read(DAYLITE_DATABASE_CONFIG))
+
+      if yaml[DAYLITE_CONFIG_SECTION]
+        Daylite::Base.establish_connection( yaml[DAYLITE_CONFIG_SECTION] )
+      end
+    end

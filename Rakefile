@@ -13,7 +13,7 @@ Rake::RDocTask.new(:rdoc) do |rdoc|
 end
 
 begin
-  require 'daylite_models'
+  require 'lib/daylite_models'
   require 'hoe'
 
   #oh, shit
@@ -27,7 +27,6 @@ begin
 
   Hoe.new('daylite-models', DayliteModels::VERSION) do |s|
     s.name = "daylite-models"
-    s.version = "0.1.0"
     s.author = "Dmitriy Dzema"
     s.email = "dimad.ag@gmail.com"
     s.summary = "Set of ActiveRecord classes to work with the Daylite 3 database"
@@ -38,5 +37,5 @@ begin
     s.extra_deps = [ ["activesupport", ">= 2.0.0"], ["activerecord", ">= 2.0.0"], ["activerecord", ">= 0.8.3"]]
   end
 rescue LoadError => e
-  
+
 end
