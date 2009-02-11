@@ -44,5 +44,4 @@ The easiest way is to create file config/database.yml relative to you running sc
 
 somewhere in you initialization code and you are done.
 
-Another way is to provide connection info directly throw Daylite::Base.establish_connection call. You will need to provide adapter, database, host, username and password params. See ActiveRecord::Base.establish_connection and Opnebase documentation for more info.
-
+Another way is to provide connection info directly through Daylite::Base.establish_connection call. You will need to provide adapter, database, host, username and password params. See ActiveRecord::Base.establish_connection and Openbase documentation for more info.

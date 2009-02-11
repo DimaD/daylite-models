@@ -1,6 +1,10 @@
 $: << File.join(File.dirname(__FILE__), 'lib')
 require 'init'
 
+module DayliteModels
+  VERSION = '0.1.1'
+end
+
 DAYLITE_DATABASE_CONFIG = 'config/database.yml'
 DAYLITE_CONFIG_SECTION = 'daylite'
 
