@@ -1,11 +1,11 @@
 class Daylite::Project < Daylite::Base
-  belongs_to :owner, :class_name => "User", :foreign_key => "assignedToID"
+  belongs_to :owner, :class_name => "User", :foreign_key => "assignedtoid"
 
-  has_many :roles, :foreign_key => "projectID"
+  has_many :roles, :foreign_key => "projectid"
   has_many :projects, :through => :roles
 
-  has_many :project_task_joins, :foreign_key => "projectID"
-  has_many :tasks, :through => :project_task_joins
+  has_many :projecttaskjoins, :foreign_key => "projectid"
+  has_many :tasks, :through => :projecttaskjoins
 
   def status_codes
     @@status_codes ||= {
