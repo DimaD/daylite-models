@@ -1,7 +1,7 @@
 DayliteModels
 ===========
 
-This is a set of ActiveRecord classes, designed to work with Daylite 4 and 5 by [Marketcircle](www.marketcircle.com).
+This is a set of ActiveRecord classes, designed to work with Daylite 4 and 5 by [Marketcircle](http://www.marketcircle.com).
 
 All the classes are in namespace Daylite. For example Daylite projects live in the class Daylite::Project.
 
