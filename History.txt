@@ -1,0 +1,18 @@
+=== 0.1.0 / 2009-02-10
+
+* Initial Release
+
+=== 0.1.1 / 2009-02-11
+
+* Minor bug fixes
+
+=== 0.2.0 / 2014-07-25
+
+Special thanks to Jason Holloway for updating this gem.
+
+Major enhancements:
+
+* Daylite-models now supports the modern Daylite v4 and v5 databases.
+* Daylite v3 is no longer supported (use v1.1 of this gem for that support)
+* Added support for Tasks (Daylite::Task)
+
