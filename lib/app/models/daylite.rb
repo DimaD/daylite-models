@@ -12,8 +12,8 @@ class Daylite::Base < ActiveRecord::Base
 
   # don't allow to save Daylite::Base objects to DB
   def readonly?
-    #    true
-    false
+    #    false
+    true
   end
 
   def method_missing(symbol, *args)
@@ -28,5 +28,13 @@ class Daylite::Base < ActiveRecord::Base
     else
       super
     end
+  end
+
+  # test for whether record has been deleted or not
+  def alive?
+    self.deletiondate.nil?
+  end
+  def dead?
+    ! self.deletiondate.nil?
   end
 end

@@ -9,6 +9,9 @@ class Daylite::Organization < Daylite::Base
   has_many :projects, through: :roles
   has_many :contacts, through: :roles
 
+  scope :alive, -> { self.where( deletiondate: nil)}
+  scope :dead, -> { self.where.not( deletiondate: nil)}
+
   def projects_tasks
     projects.collect { |p| p.tasks }.flatten
   end

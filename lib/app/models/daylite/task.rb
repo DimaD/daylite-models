@@ -10,6 +10,9 @@ class Daylite::Task < Daylite::Base
   has_many :project_task_joins, :foreign_key => "taskid"
   has_many :projects, :through => :projecttaskjoins
 
+  scope :alive, -> { self.where( deletiondate: nil)}
+  scope :dead, -> { self.where.not( deletiondate: nil)}
+
   def organization
     organizations[0]
   end
