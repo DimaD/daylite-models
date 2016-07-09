@@ -37,4 +37,5 @@ class Daylite::Base < ActiveRecord::Base
   def dead?
     ! self.deletiondate.nil?
   end
+
 end

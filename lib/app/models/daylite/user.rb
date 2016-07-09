@@ -1,5 +1,4 @@
 class Daylite::User < Daylite::Base
-
   # Changed with Daylite 4
   self.table_name = "dluser"
 
