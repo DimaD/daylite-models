@@ -5,13 +5,14 @@ class Daylite::Base < ActiveRecord::Base
   self.abstract_class = true
   self.pluralize_table_names = false
 
-  set_primary_key "_rowid"
-  set_table_name do
+  self.primary_key = "_rowid"
+  self.table_name do
     self.name.sub("Daylite::", "")
   end
 
   # don't allow to save Daylite::Base objects to DB
   def readonly?
+    #    false
     true
   end
 
@@ -28,4 +29,13 @@ class Daylite::Base < ActiveRecord::Base
       super
     end
   end
+
+  # test for whether record has been deleted or not
+  def alive?
+    self.deletiondate.nil?
+  end
+  def dead?
+    ! self.deletiondate.nil?
+  end
+
 end

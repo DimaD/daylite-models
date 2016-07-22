@@ -1,13 +1,13 @@
 require 'rubygems'
 require 'rake'
 require 'rake/testtask'
-require 'rake/rdoctask'
+require 'rdoc/task'
 
 desc 'Generate documentation for the daylite_models plugin.'
-Rake::RDocTask.new(:rdoc) do |rdoc|
+RDoc::Task.new do |rdoc|
   rdoc.rdoc_dir = 'rdoc'
   rdoc.title    = 'DayliteModels'
-  rdoc.options << '--line-numbers' << '--inline-source'
+  rdoc.options << '--line-numbers' 
   rdoc.rdoc_files.include('README.markdown')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
@@ -16,7 +16,7 @@ begin
   require 'lib/daylite_models'
   require 'hoe'
 
-  #oh, shit
+  #oh, dear
   class Hoe
     def extra_deps
       @extra_deps.reject do |x|
@@ -29,7 +29,7 @@ begin
     s.name = "daylite-models"
     s.author = "Dmitriy Dzema"
     s.email = "dimad.ag@gmail.com"
-    s.summary = "Set of ActiveRecord classes to work with the Daylite 3 database"
+    s.summary = "Set of ActiveRecord classes to work with the Daylite v4 & v5 databases"
 
     s.rubyforge_name = 'daylite-models'
     s.remote_rdoc_dir = '' # Release to root
