@@ -3,8 +3,8 @@ lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
-  spec.name          = 'daylite-models'
-  spec.version       = '0.3.2'
+  spec.name          = 'daylite_models'
+  spec.version       = '0.4.0'
   spec.authors       = ['Dmitry Dzema', 'Jason Holloway']
   spec.email         = ['jason_holloway@mac.com']
 
@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
 All the classes are in namespace Daylite. For example, Daylite projects live in the class Daylite::Project.
 Models attributes are mapped to usual ruby underscore_notation from Daylite cameCase notation.}
 
-  spec.homepage      = 'https://github.com/kitebuggy/daylite-models'
+  spec.homepage      = 'https://github.com/kitebuggy/daylite_models'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0")
