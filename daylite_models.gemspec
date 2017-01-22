@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.test_files = ["test/test_helper.rb"]
 
   s.add_dependency 'activerecord'
-  s.add_dependency 'active_support'
+  s.add_dependency 'activesupport'
   s.add_dependency 'pg'
 end
 
