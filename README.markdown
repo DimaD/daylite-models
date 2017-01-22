@@ -62,3 +62,4 @@ You are ready to rock! Now you can use Daylite classes in you application as usu
         Daylite::Base.establish_connection( yaml[DAYLITE_CONFIG_SECTION] )
       end
     end
+
