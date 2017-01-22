@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.date = %q{2017-01-22}
   s.email = %q{jason_holloway@mac.com}
   s.extra_rdoc_files = ["History.txt", "Manifest.txt"]
-  spec.files         = `git ls-files -z`.split("\x0")
+  s.files         = `git ls-files -z`.split("\x0")
   s.has_rdoc = true
   s.rdoc_options = ["--main", "README.markdown"]
   s.require_paths = ["lib"]
