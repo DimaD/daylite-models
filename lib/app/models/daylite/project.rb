@@ -6,12 +6,13 @@ class Daylite::Project < Daylite::Base
 
   has_many :projecttaskjoins, :foreign_key => "projectid"
   has_many :tasks, :through => :projecttaskjoins
+  has_many :notes, :through => :projectnotejoins
 
   def status_codes
     @@status_codes ||= {
       0 => "In Progress",
-      1 => "Deffered",
-      2 => "Canceled",
+      1 => "Deferred",
+      2 => "Cancelled",
       3 => "Abandoned",
       4 => "New",
       7 => "Done",

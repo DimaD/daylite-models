@@ -8,6 +8,7 @@ class Daylite::User < Daylite::Base
   has_many :organizations, foreign_key: "createdbyid"
 #  has_many :organizations, :foreign_key => "assignedtoid"
   has_many :tasks, :class_name => "Task", :foreign_key => "assignedtoid"
+  has_many :notes, :class_name => "Note", :foreign_key => "assignedtoid"
 
   scope :active, -> { where( active: 1)}
 

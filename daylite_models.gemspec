@@ -1,13 +1,13 @@
 Gem::Specification.new do |s|
   s.name = %q{daylite-models}
-  s.version = "0.2.0"
+  s.version = "0.3.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Dmitriy Dzema"]
-  s.date = %q{2014-07-25}
-  s.email = %q{dimad.ag@gmail.com}
+  s.authors = ["Dmitriy Dzema", "Jason Holloway"]
+  s.date = %q{2017-01-22}
+  s.email = %q{jason_holloway@mac.com}
   s.extra_rdoc_files = ["History.txt", "Manifest.txt"]
-  s.files = ["History.txt", "LICENSE", "Manifest.txt", "README.markdown", "Rakefile", "app/models/daylite.rb", "app/models/daylite/contact.rb", "app/models/daylite/organization.rb", "app/models/daylite/organization_task_join.rb", "app/models/daylite/project.rb", "app/models/daylite/project_task_join.rb", "app/models/daylite/role.rb", "app/models/daylite/role_type.rb", "app/models/daylite/task.rb", "app/models/daylite/user.rb", "config/database.yml.exmp", "daylite_models.gemspec", "init.rb", "install.rb", "lib/active_record/connection_adapters/openbase_adapter.rb", "lib/daylite_models.rb", "tasks/users_plugin_tasks.rake", "test/daylite_models_plugin_test.rb", "test/test_helper.rb", "uninstall.rb"]
+  spec.files         = `git ls-files -z`.split("\x0")
   s.has_rdoc = true
   s.rdoc_options = ["--main", "README.markdown"]
   s.require_paths = ["lib"]
