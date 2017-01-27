@@ -10,6 +10,7 @@ require 'daylite'
 # $LOAD_PATH << models_path << daylite_path << '.'
 # ActiveSupport::Dependencies.autoload_paths << models_path << daylite_path << '.'
 
+require 'daylite/base'
 Dir[File.join(__dir__, 'daylite', '*.rb')].each {|file| require file }
 
 module DayliteModels
