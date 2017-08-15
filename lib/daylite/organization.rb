@@ -14,9 +14,11 @@ class Daylite::Organization < Daylite::Base
   has_many :projects, through: :roles
   has_many :contacts, through: :roles
 
-  has_many :phones, :foreign_key => "organizationid"
-  has_many :electronic_addresses, :foreign_key => "organizationid"
+  has_many :phones, foreign_key: "organizationid"
+  has_many :electronic_addresses, foreign_key: "organizationid"
 
+  has_many :geoaddresses, foreign_key: "organizationid"
+  
   scope :alive, -> { self.where( deletiondate: nil)}
   scope :dead, -> { self.where.not( deletiondate: nil)}
 
