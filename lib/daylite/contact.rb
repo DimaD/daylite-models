@@ -12,6 +12,7 @@ class Daylite::Contact < Daylite::Base
 
   has_many :phones, foreign_key: "contactid"
   has_many :electronic_addresses, foreign_key: "contactid"
+  has_many :geoaddresses, foreign_key: "contactid"
 
   scope :alive, -> { self.where( deletiondate: nil)}
   scope :dead, -> { self.where.not( deletiondate: nil)}
