@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
 
   spec.summary = %q{Set of ActiveRecord classes to work with the Daylite 4, 5 and 6 self-serve databases}
 
-  spec.description = %q{This is a set of ActiveRecord classes, designed to work with self-serve (not Cloud) Daylite 4, 5 and 6 by [Marketcircle](http://www.marketcircle.com).
+  spec.description = %q{This is a set of ActiveRecord classes, designed to work with self-serve instances of Daylite 4, 5 and 6 by [Marketcircle](http://www.marketcircle.com).
 All the classes are in namespace Daylite. For example, Daylite projects live in the class Daylite::Project.
 Models attributes are mapped to usual ruby underscore_notation from Daylite cameCase notation.}
 
