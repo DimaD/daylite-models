@@ -1,6 +1,6 @@
 class Daylite::Contact < Daylite::Base
   belongs_to :category, foreign_key: "categoryid"
-  
+    
   has_one :user, foreign_key: "contactid"
 
   has_many :contacttaskjoins, foreign_key: "contactid"
