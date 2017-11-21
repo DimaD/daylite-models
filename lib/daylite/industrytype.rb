@@ -1,4 +1,4 @@
-class Daylite::Industry < Daylite::Base
+class Daylite::Industrytype < Daylite::Base
 
   has_many :organizations, foreign_key: "organizationid"
 
