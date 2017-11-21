@@ -14,5 +14,5 @@ require 'daylite/base'
 Dir[File.join(__dir__, 'daylite', '*.rb')].each {|file| require file }
 
 module DayliteModels
-  VERSION = '0.4.10'
+  VERSION = '0.5.0'
 end
