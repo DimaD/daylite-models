@@ -4,13 +4,13 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = 'daylite_models'
-  spec.version       = '0.5.0'
+  spec.version       = '0.5.1'
   spec.authors       = ['Dmitry Dzema', 'Jason Holloway']
   spec.email         = ['jason_holloway@mac.com']
 
-  spec.summary = %q{Set of ActiveRecord classes to work with the Daylite 4 and 5 databases}
+  spec.summary = %q{Set of ActiveRecord classes to work with the Daylite 4, 5 and 6 self-serve databases}
 
-  spec.description = %q{This is a set of ActiveRecord classes, designed to work with Daylite 4, 5 and 6 by [Marketcircle](http://www.marketcircle.com).
+  spec.description = %q{This is a set of ActiveRecord classes, designed to work with self-serve (not Cloud) Daylite 4, 5 and 6 by [Marketcircle](http://www.marketcircle.com).
 All the classes are in namespace Daylite. For example, Daylite projects live in the class Daylite::Project.
 Models attributes are mapped to usual ruby underscore_notation from Daylite cameCase notation.}
 
