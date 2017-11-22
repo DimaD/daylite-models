@@ -6,6 +6,8 @@ class Daylite::Organization < Daylite::Base
 
   has_many :organizationtaskjoins, foreign_key: "organizationid"
   has_many :tasks, through: :organizationtaskjoins
+
+  has_many :organizationnotejoins, foreign_key: "organizationid"
   has_many :notes, through: :organizationnotejoins
 
   has_many :keywordorganizationjoins, foreign_key: "organizationid"
