@@ -2,6 +2,7 @@ class Daylite::Organization < Daylite::Base
   belongs_to :owner, class_name: "User", foreign_key: "assignedtoid"
   belongs_to :category, foreign_key: "categoryid"
   belongs_to :industrytype, foreign_key: "industrytypeid"
+  belongs_to :large_data, class_name: "largedata", foreign_key: "detailsid"
 
   has_many :organizationtaskjoins, foreign_key: "organizationid"
   has_many :tasks, through: :organizationtaskjoins
