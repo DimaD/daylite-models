@@ -11,9 +11,6 @@ class Daylite::Note < Daylite::Base
   has_many :project_note_joins, foreign_key: "noteid"
   has_many :projects, through: :projectnotejoins
 
-  scope :alive, -> { self.where( deletiondate: nil)}
-  scope :dead, -> { self.where.not( deletiondate: nil)}
-
   def organization
     organizations[0]
   end

@@ -4,9 +4,6 @@ class Daylite::LargeData < Daylite::Base
   
   has_one :note, foreign_key: "largedataid"
   has_one :organization, foreign_key: "detailsid"
-  
-  scope :alive, -> { self.where( deletiondate: nil)}
-  scope :dead, -> { self.where.not( deletiondate: nil)}
 
   def to_s
     "#<Daylite::LargeData:#{plaintext}>"

@@ -22,9 +22,6 @@ class Daylite::Organization < Daylite::Base
   has_many :electronic_addresses, foreign_key: "organizationid"
   has_many :geoaddresses, foreign_key: "organizationid"
   
-  scope :alive, -> { self.where( deletiondate: nil)}
-  scope :dead, -> { self.where.not( deletiondate: nil)}
-
   def projects_tasks
     projects.collect { |p| p.tasks }.flatten
   end
