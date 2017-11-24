@@ -17,8 +17,8 @@ class Daylite::Contact < Daylite::Base
 
   has_many :organizations, through: :roles
 
-  has_many :keywordcontactjoins, foreign_key: "contactid"
-  has_many :keywords, through: :keywordcontactjoins
+  has_many :contactkeywordjoins, foreign_key: "contactid"
+  has_many :keywords, through: :contactkeywordjoins
 
   has_many :phones, foreign_key: "contactid"
   has_many :electronic_addresses, foreign_key: "contactid"
