@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.name          = 'daylite_models'
   spec.version       = '0.5.6'
   spec.authors       = ['Dmitry Dzema', 'Jason Holloway']
-  spec.email         = ['jason_holloway@mac.com']
+  spec.email         = ['dimad.ag@gmail.com', 'jason_holloway@mac.com']
 
   spec.summary = %q{Set of ActiveRecord classes to work with the Daylite 4, 5 and 6 self-serve databases}
 
