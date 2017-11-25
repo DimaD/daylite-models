@@ -2,3 +2,28 @@ inherit_from: .rubocop_todo.yml
 
 Style/TrailingCommaInLiteral:
   EnforcedStyleForMultiline: comma
+
+Style/HashSyntax:
+  EnforcedStyle: no_mixed_keys
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+# Offense count: 27
+Style/Documentation:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
+
+Lint/AssignmentInCondition:
+  AllowSafeAssignment: true
+
+Lint/HandleExceptions:
+  Exclude:
+    - 'Rakefile'
+
+Metrics/LineLength:
+  Max: 110
+  Exclude:
+    - 'daylite_models.gemspec'

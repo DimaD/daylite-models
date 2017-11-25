@@ -36,5 +36,5 @@ begin
     s.need_zip = true
     s.extra_deps = [['activesupport', '>= 2.0.0'], ['activerecord', '>= 2.0.0'], ['activerecord', '>= 0.8.3']]
   end
-rescue LoadError => e
+rescue LoadError
 end

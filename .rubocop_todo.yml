@@ -7,86 +7,16 @@
 # versions of RuboCop, may require this file to be generated again.
 
 # Offense count: 1
-# Configuration parameters: AllowSafeAssignment.
-Lint/AssignmentInCondition:
-  Exclude:
-    - 'lib/daylite/base.rb'
-
-# Offense count: 1
-Lint/HandleExceptions:
-  Exclude:
-    - 'Rakefile'
-
-# Offense count: 1
-Lint/UselessAssignment:
-  Exclude:
-    - 'Rakefile'
-
-# Offense count: 10
-# Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, IgnoredPatterns.
-# URISchemes: http, https
-Metrics/LineLength:
-  Max: 175
-
-# Offense count: 1
 # Configuration parameters: CountComments.
 Metrics/MethodLength:
   Max: 11
-
-# Offense count: 26
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: nested, compact
-Style/ClassAndModuleChildren:
-  Enabled: false
 
 # Offense count: 1
 Style/ClassVars:
   Exclude:
     - 'lib/daylite/project.rb'
 
-# Offense count: 27
-Style/Documentation:
-  Enabled: false
-
-# Offense count: 35
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: when_needed, always, never
-Style/FrozenStringLiteralComment:
-  Enabled: false
-
-# Offense count: 47
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles, UseHashRocketsWithSymbolValues, PreferHashRocketsForNonAlnumEndingSymbols.
-# SupportedStyles: ruby19, hash_rockets, no_mixed_keys, ruby19_no_mixed_keys
-Style/HashSyntax:
-  Exclude:
-    - 'lib/daylite/contactnotejoin.rb'
-    - 'lib/daylite/contacttaskjoin.rb'
-    - 'lib/daylite/keyword.rb'
-    - 'lib/daylite/opportunity.rb'
-    - 'lib/daylite/organizationnotejoin.rb'
-    - 'lib/daylite/organizationtaskjoin.rb'
-    - 'lib/daylite/project.rb'
-    - 'lib/daylite/projectnotejoin.rb'
-    - 'lib/daylite/projecttaskjoin.rb'
-    - 'lib/daylite/role.rb'
-    - 'lib/daylite/task.rb'
-    - 'lib/daylite/user.rb'
-
 # Offense count: 1
 Style/MethodMissing:
-  Exclude:
-    - 'lib/daylite/base.rb'
-
-# Offense count: 1
-# Cop supports --auto-correct.
-Style/MutableConstant:
-  Exclude:
-    - 'lib/daylite_models.rb'
-
-# Offense count: 6
-# Cop supports --auto-correct.
-Style/RedundantSelf:
   Exclude:
     - 'lib/daylite/base.rb'
