@@ -25,10 +25,6 @@ Models attributes are mapped to usual ruby underscore_notation from Daylite came
   spec.add_development_dependency 'bundler', '~> 1.7'
   spec.add_development_dependency 'rake', '~> 10.0'
 
-  # spec.add_development_dependency 'minitest'
-  # spec.add_development_dependency 'vcr'
-  # spec.add_development_dependency 'webmock'
-
   spec.add_development_dependency 'yard'
 
   spec.add_dependency 'activerecord'
