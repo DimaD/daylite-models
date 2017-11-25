@@ -2,4 +2,5 @@ pkg
 .DS_Store
 *~
 rdoc/
+.bundle
 *.gem
