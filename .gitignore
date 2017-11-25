@@ -3,3 +3,4 @@ pkg
 *~
 rdoc/
 .bundle
+.bin
