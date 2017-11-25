@@ -1,5 +1,3 @@
-# coding: utf-8
-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
@@ -9,11 +7,11 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Dmitry Dzema', 'Jason Holloway']
   spec.email         = ['dimad.ag@gmail.com', 'jason_holloway@mac.com']
 
-  spec.summary = %q{Set of ActiveRecord classes to work with the Daylite 4, 5 and 6 self-serve databases}
+  spec.summary = 'Set of ActiveRecord classes to work with the Daylite 4, 5 and 6 self-serve databases'
 
-  spec.description = %q{This is a set of ActiveRecord classes, designed to work with self-serve instances of Daylite 4, 5 and 6 by [Marketcircle](http://www.marketcircle.com).
+  spec.description = 'This is a set of ActiveRecord classes, designed to work with self-serve instances of Daylite 4, 5 and 6 by [Marketcircle](http://www.marketcircle.com).
 All the classes are in namespace Daylite. For example, Daylite projects live in the class Daylite::Project.
-Models attributes are mapped to usual ruby underscore_notation from Daylite cameCase notation.}
+Models attributes are mapped to usual ruby underscore_notation from Daylite cameCase notation.'
 
   spec.homepage      = 'https://github.com/kitebuggy/daylite_models'
   spec.license       = 'MIT'

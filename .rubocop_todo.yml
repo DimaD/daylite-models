@@ -7,108 +7,6 @@
 # versions of RuboCop, may require this file to be generated again.
 
 # Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: AllowAdjacentOneLineDefs, NumberOfEmptyLines.
-Layout/EmptyLineBetweenDefs:
-  Exclude:
-    - 'lib/daylite/base.rb'
-
-# Offense count: 1
-# Cop supports --auto-correct.
-Layout/EmptyLinesAroundBeginBody:
-  Exclude:
-    - 'Rakefile'
-
-# Offense count: 13
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: empty_lines, empty_lines_except_namespace, empty_lines_special, no_empty_lines
-Layout/EmptyLinesAroundClassBody:
-  Exclude:
-    - 'lib/daylite/base.rb'
-    - 'lib/daylite/category.rb'
-    - 'lib/daylite/contact.rb'
-    - 'lib/daylite/electronic_address.rb'
-    - 'lib/daylite/geoaddress.rb'
-    - 'lib/daylite/industrytype.rb'
-    - 'lib/daylite/keyword.rb'
-    - 'lib/daylite/label.rb'
-    - 'lib/daylite/large_data.rb'
-    - 'lib/daylite/phone.rb'
-    - 'lib/daylite/roletype.rb'
-
-# Offense count: 1
-# Cop supports --auto-correct.
-Layout/EmptyLinesAroundExceptionHandlingKeywords:
-  Exclude:
-    - 'Rakefile'
-
-# Offense count: 4
-# Cop supports --auto-correct.
-Layout/LeadingCommentSpace:
-  Exclude:
-    - 'Rakefile'
-    - 'lib/daylite_models.rb'
-
-# Offense count: 1
-# Cop supports --auto-correct.
-Layout/SpaceAfterNot:
-  Exclude:
-    - 'lib/daylite/base.rb'
-
-# Offense count: 5
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles, EnforcedStyleForEmptyBraces, SupportedStylesForEmptyBraces, SpaceBeforeBlockParameters.
-# SupportedStyles: space, no_space
-# SupportedStylesForEmptyBraces: space, no_space
-Layout/SpaceInsideBlockBraces:
-  Exclude:
-    - 'Gemfile'
-    - 'lib/daylite/base.rb'
-    - 'lib/daylite/user.rb'
-    - 'lib/daylite_models.rb'
-
-# Offense count: 1
-# Cop supports --auto-correct.
-Layout/SpaceInsideBrackets:
-  Exclude:
-    - 'Rakefile'
-
-# Offense count: 3
-# Cop supports --auto-correct.
-Layout/SpaceInsideParens:
-  Exclude:
-    - 'lib/daylite/base.rb'
-    - 'lib/daylite/user.rb'
-
-# Offense count: 8
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles.
-# SupportedStyles: final_newline, final_blank_line
-Layout/TrailingBlankLines:
-  Exclude:
-    - 'lib/daylite/category.rb'
-    - 'lib/daylite/contact.rb'
-    - 'lib/daylite/electronic_address.rb'
-    - 'lib/daylite/geoaddress.rb'
-    - 'lib/daylite/industrytype.rb'
-    - 'lib/daylite/label.rb'
-    - 'lib/daylite/phone.rb'
-    - 'test/test_helper.rb'
-
-# Offense count: 7
-# Cop supports --auto-correct.
-Layout/TrailingWhitespace:
-  Exclude:
-    - 'Rakefile'
-    - 'lib/daylite/electronic_address.rb'
-    - 'lib/daylite/geoaddress.rb'
-    - 'lib/daylite/label.rb'
-    - 'lib/daylite/large_data.rb'
-    - 'lib/daylite/organization.rb'
-    - 'lib/daylite/task.rb'
-
-# Offense count: 1
 # Configuration parameters: AllowSafeAssignment.
 Lint/AssignmentInCondition:
   Exclude:
@@ -150,12 +48,6 @@ Style/ClassVars:
 Style/Documentation:
   Enabled: false
 
-# Offense count: 1
-# Cop supports --auto-correct.
-Style/Encoding:
-  Exclude:
-    - 'daylite_models.gemspec'
-
 # Offense count: 35
 # Cop supports --auto-correct.
 # Configuration parameters: EnforcedStyle, SupportedStyles.
@@ -193,44 +85,8 @@ Style/MutableConstant:
   Exclude:
     - 'lib/daylite_models.rb'
 
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: PreferredDelimiters.
-Style/PercentLiteralDelimiters:
-  Exclude:
-    - 'daylite_models.gemspec'
-
 # Offense count: 6
 # Cop supports --auto-correct.
 Style/RedundantSelf:
   Exclude:
     - 'lib/daylite/base.rb'
-
-# Offense count: 127
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyle, SupportedStyles, ConsistentQuotesInMultiline.
-# SupportedStyles: single_quotes, double_quotes
-Style/StringLiterals:
-  Enabled: false
-
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: IgnoredMethods.
-# IgnoredMethods: respond_to, define_method
-Style/SymbolProc:
-  Exclude:
-    - 'lib/daylite/organization.rb'
-
-# Offense count: 1
-# Cop supports --auto-correct.
-# Configuration parameters: EnforcedStyleForMultiline, SupportedStylesForMultiline.
-# SupportedStylesForMultiline: comma, consistent_comma, no_comma
-Style/TrailingCommaInLiteral:
-  Exclude:
-    - 'lib/daylite/project.rb'
-
-# Offense count: 2
-# Cop supports --auto-correct.
-Style/UnneededPercentQ:
-  Exclude:
-    - 'daylite_models.gemspec'
