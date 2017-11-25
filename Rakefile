@@ -1,13 +1,9 @@
-require 'rubygems'
 require 'rake'
-require 'rake/testtask'
-require 'rdoc/task'
+require 'yard'
 
 desc 'Generate documentation for the daylite_models plugin.'
-RDoc::Task.new do |rdoc|
-  rdoc.rdoc_dir = 'rdoc'
-  rdoc.title    = 'DayliteModels'
-  rdoc.options << '--line-numbers'
-  rdoc.rdoc_files.include('README.markdown')
-  rdoc.rdoc_files.include('lib/**/*.rb')
+YARD::Rake::YardocTask.new do |t|
+  t.files   = ['README.markdown', 'lib/**/*.rb']
+  t.options = ['--any', '--extra', '--opts']
+  t.stats_options = ['--list-undoc']
 end
