@@ -1,9 +1,10 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'daylite_models'
 
 Gem::Specification.new do |spec|
   spec.name          = 'daylite_models'
-  spec.version       = '0.5.6'
+  spec.version       = DayliteModels::VERSION
   spec.authors       = ['Dmitry Dzema', 'Jason Holloway']
   spec.email         = ['dimad.ag@gmail.com', 'jason_holloway@mac.com']
 
