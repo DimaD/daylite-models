@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
 All the classes are in namespace Daylite. For example, Daylite projects live in the class Daylite::Project.
 Models attributes are mapped to usual ruby underscore_notation from Daylite cameCase notation.'
 
-  spec.homepage      = 'https://github.com/kitebuggy/daylite_models'
+  spec.homepage      = 'https://github.com/DimaD/daylite-models'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0")
