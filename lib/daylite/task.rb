@@ -10,15 +10,6 @@ class Daylite::Task < Daylite::Base
   has_many :project_task_joins, :foreign_key => 'taskid'
   has_many :projects, :through => :projecttaskjoins
 
-  # @@status_codes = {
-  #   0 => "Open",
-  #   4 => "Pending",
-  #   5 => "Deferred",
-  #   6 => "In Progress",
-  #   7 => "Done",
-  #   8 => "Cancelled"
-  # }
-
   def organization
     organizations[0]
   end

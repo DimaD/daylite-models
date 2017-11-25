@@ -9,7 +9,6 @@ class Daylite::Base < ActiveRecord::Base
 
   # don't allow to save Daylite::Base objects to DB
   def readonly?
-    #    false
     true
   end
 
