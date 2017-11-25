@@ -1,37 +1,39 @@
-Gem::Specification.new do |s|
-  s.name = %q{daylite-models}
-  s.version = "0.2.0"
+# coding: utf-8
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-  s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Dmitriy Dzema"]
-  s.date = %q{2014-07-25}
-  s.email = %q{dimad.ag@gmail.com}
-  s.extra_rdoc_files = ["History.txt", "Manifest.txt"]
-  s.files = ["History.txt", "LICENSE", "Manifest.txt", "README.markdown", "Rakefile", "app/models/daylite.rb", "app/models/daylite/contact.rb", "app/models/daylite/organization.rb", "app/models/daylite/organization_task_join.rb", "app/models/daylite/project.rb", "app/models/daylite/project_task_join.rb", "app/models/daylite/role.rb", "app/models/daylite/role_type.rb", "app/models/daylite/task.rb", "app/models/daylite/user.rb", "config/database.yml.exmp", "daylite_models.gemspec", "init.rb", "install.rb", "lib/active_record/connection_adapters/openbase_adapter.rb", "lib/daylite_models.rb", "tasks/users_plugin_tasks.rake", "test/daylite_models_plugin_test.rb", "test/test_helper.rb", "uninstall.rb"]
-  s.has_rdoc = true
-  s.rdoc_options = ["--main", "README.markdown"]
-  s.require_paths = ["lib"]
-  s.rubyforge_project = %q{daylite-models}
-  s.rubygems_version = %q{1.4.1}
-  s.summary = %q{Set of ActiveRecord classes to work with the Daylite 4 and 5 databases}
-  s.test_files = ["test/test_helper.rb"]
+Gem::Specification.new do |spec|
+  spec.name          = 'daylite_models'
+  spec.version       = '0.5.6'
+  spec.authors       = ['Dmitry Dzema', 'Jason Holloway']
+  spec.email         = ['jason_holloway@mac.com']
 
-  if s.respond_to? :specification_version then
-    current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
-    s.specification_version = 2
+  spec.summary = %q{Set of ActiveRecord classes to work with the Daylite 4, 5 and 6 self-serve databases}
 
-    if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<activesupport>, [">= 2.0.0"])
-      s.add_runtime_dependency(%q<activerecord>, [">= 2.0.0"])
-      s.add_runtime_dependency(%q<activerecord>, [">= 0.8.3"])
-    else
-      s.add_dependency(%q<activesupport>, [">= 2.0.0"])
-      s.add_dependency(%q<activerecord>, [">= 2.0.0"])
-      s.add_dependency(%q<activerecord>, [">= 0.8.3"])
-    end
-  else
-    s.add_dependency(%q<activesupport>, [">= 2.0.0"])
-    s.add_dependency(%q<activerecord>, [">= 2.0.0"])
-    s.add_dependency(%q<activerecord>, [">= 0.8.3"])
-  end
+  spec.description = %q{This is a set of ActiveRecord classes, designed to work with self-serve instances of Daylite 4, 5 and 6 by [Marketcircle](http://www.marketcircle.com).
+All the classes are in namespace Daylite. For example, Daylite projects live in the class Daylite::Project.
+Models attributes are mapped to usual ruby underscore_notation from Daylite cameCase notation.}
+
+  spec.homepage      = 'https://github.com/kitebuggy/daylite_models'
+  spec.license       = 'MIT'
+
+  spec.files         = `git ls-files -z`.split("\x0")
+  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
+  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
+  spec.require_paths = ['lib']
+
+  spec.add_development_dependency 'bundler', '~> 1.7'
+  spec.add_development_dependency 'rake', '~> 10.0'
+
+  # spec.add_development_dependency 'minitest'
+  # spec.add_development_dependency 'vcr'
+  # spec.add_development_dependency 'webmock'
+
+  spec.add_development_dependency 'yard'
+
+  spec.add_dependency 'activerecord'
+  spec.add_dependency 'activesupport'
+  spec.add_dependency 'pg'
+
+  spec.has_rdoc = 'yard'
 end

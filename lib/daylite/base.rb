@@ -1,6 +1,3 @@
-module Daylite
-end
-
 class Daylite::Base < ActiveRecord::Base
   self.abstract_class = true
   self.pluralize_table_names = false
@@ -29,6 +26,10 @@ class Daylite::Base < ActiveRecord::Base
       super
     end
   end
+
+  # scopes for all objects
+  scope :alive, -> { self.where( deletiondate: nil)}
+  scope :dead, -> { self.where.not( deletiondate: nil)}
 
   # test for whether record has been deleted or not
   def alive?
