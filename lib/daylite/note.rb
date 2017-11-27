@@ -8,8 +8,8 @@ class Daylite::Note < Daylite::Base
   has_many :contactnotejoins, foreign_key: 'noteid'
   has_many :contacts, through: :contactnotejoins
 
-  has_many :project_note_joins, foreign_key: 'noteid'
-  has_many :projects, through: :projectnotejoins
+  has_many :noteprojectjoins, foreign_key: 'noteid'
+  has_many :projects, through: :noteprojectjoins
 
   def organization
     organizations[0]

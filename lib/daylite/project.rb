@@ -6,7 +6,9 @@ class Daylite::Project < Daylite::Base
 
   has_many :projecttaskjoins, :foreign_key => 'projectid'
   has_many :tasks, :through => :projecttaskjoins
-  has_many :notes, :through => :projectnotejoins
+
+  has_many :noteprojectjoins, :foreign_key => 'projectid'
+  has_many :notes, :through => :noteprojectjoins
 
   def status_codes
     @@status_codes ||= {
