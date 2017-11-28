@@ -12,7 +12,7 @@ Usage
 
 Please note
 -----------
-This gem assumes that you have added an admin username to the existing Postgres database or somehow know Marketcirlce's own administrative username and password.  
+This gem assumes that you have added an admin username to the existing Postgres database or somehow know Marketcirlce's own administrative username and password.
 
 Without this admin username and password, access to your database will not be possible.
 
