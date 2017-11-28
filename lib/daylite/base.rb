@@ -7,7 +7,7 @@ class Daylite::Base < ActiveRecord::Base
     name.sub('Daylite::', '')
   end
 
-  # don't allow to save Daylite::Base objects to DB
+  # Do not allow to save Daylite::Base objects to DB
   def readonly?
     true
   end
