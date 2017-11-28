@@ -48,7 +48,7 @@ daylite:
   database: <MyOrganization>
   username: <my_admin_username>
   password: <my_password>
-
+```
 
 Add the following line to your environment.rb (optional):
 
