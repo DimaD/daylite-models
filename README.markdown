@@ -34,7 +34,7 @@ gem 'daylite_models'
 
 in your Gemfile in the usual way.
 
-You initiate and pass connection info through the Daylite::Base.establish_connection call. You will need to provide adapter, database, host, username and password params. See ActiveRecord::Base.establish_connection and Postgres documentation for more info. You may use the following piece of code:
+You initiate and pass connection info through the [Daylite::Base.establish_connection](http://api.rubyonrails.org/classes/ActiveRecord/ConnectionHandling.html#method-i-establish_connection) call. You will need to provide adapter, database, host, username and password params. See ActiveRecord::Base.establish_connection and Postgres documentation for more info. You may use the following piece of code:
 
 Add _daylite_ section to you database.yml, e.g.
 
