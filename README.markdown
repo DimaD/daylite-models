@@ -22,11 +22,15 @@ Usage as a gem
 
 Place
 
-    require 'daylite_models'
+```ruby
+require 'daylite_models'
+```
 
 somewhere in you initialization code and/or
 
-    gem 'daylite_models'
+```ruby
+gem 'daylite_models'
+```
 
 in your Gemfile in the usual way.
 
@@ -34,32 +38,35 @@ You initiate and pass connection info through the Daylite::Base.establish_connec
 
 Add _daylite_ section to you database.yml, e.g.
 
-    daylite:
-        adapter: postgres
-	encoding: unicode
-	sslmode: require
-	port: 6181
-        host: <my_daylite_host>
-        database: <MyOrganization>
-        username: <my_admin_username>
-        password: <my_password>
+```yaml
+daylite:
+  adapter: postgres
+  encoding: unicode
+  sslmode: require
+  port: 6181
+  host: <my_daylite_host>
+  database: <MyOrganization>
+  username: <my_admin_username>
+  password: <my_password>
 
 
 Add the following line to your environment.rb (optional):
 
-    Daylite::Base.establish_connection(:daylite)
+```ruby
+Daylite::Base.establish_connection(:daylite)
+```
 
 You are ready to rock! Now you can use Daylite classes in you application as usual Rails models.
 
+```ruby
+DAYLITE_DATABASE_CONFIG = 'config/database.yml'
+DAYLITE_CONFIG_SECTION = 'daylite'
 
-    DAYLITE_DATABASE_CONFIG = 'config/database.yml'
-    DAYLITE_CONFIG_SECTION = 'daylite'
+if File.exist?(DAYLITE_DATABASE_CONFIG)
+  yaml = YAML::load(File.read(DAYLITE_DATABASE_CONFIG))
 
-    if File.exist?(DAYLITE_DATABASE_CONFIG)
-      yaml = YAML::load(File.read(DAYLITE_DATABASE_CONFIG))
-
-      if yaml[DAYLITE_CONFIG_SECTION]
-        Daylite::Base.establish_connection( yaml[DAYLITE_CONFIG_SECTION] )
-      end
-    end
-
+  if yaml[DAYLITE_CONFIG_SECTION]
+    Daylite::Base.establish_connection( yaml[DAYLITE_CONFIG_SECTION] )
+  end
+end
+```
